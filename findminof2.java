@@ -1,3 +1,11 @@
+/**
+ * Jeanine Rioux
+ * 9/13/3017
+ * CSA 3.1) Write an application takes reads two integer variables and 
+ * exchanges their values if the first one is greater than the second one.
+ * */
+package findminoftwo;
+
 import java.util.Scanner;
 
 public class FindMinofTwo 
@@ -24,7 +32,7 @@ public class FindMinofTwo
            System.out.println("Ahh, your first number is higher.");
             holder = num1;
             num1 = num2;
-            num2 = num1;
+            num2 = holder;
             
             System.out.println ("After replacement, your first number is "
                                 + num1 + " and your second number is "
@@ -32,7 +40,8 @@ public class FindMinofTwo
         }//End if
         else
         {
-            System.out.println ("your second number is higher so no change made.");
+            System.out.println ("Your second number is higher so your first number is still "
+                                + num1 + " and your second number is still " + num2);
         }//End else
         
     } // End method main
