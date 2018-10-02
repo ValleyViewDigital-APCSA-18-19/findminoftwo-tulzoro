@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class IntExchange{
+    public static void main(String[] args){
+        //Ints
+        int num1, num2, holdInt;
+        Scanner kb = new Scanner(System.in);
+        kb.useDelimiter(" |\n");
+        System.out.print("Type the first two integers: ");
+        num1=kb.nextInt();
+        num2=kb.nextInt();
+        holdInt = Math.max(num1, num2);
+        if(holdInt==num1){
+            //empty on purpose
+        } else {
+            num1 ^= num2;
+            num2 ^= num1;
+            num1 ^= num2;
+        }
+        
+        System.out.print("Your first number is " + num1 + " and your second number is " + num2);
+    }
+}
